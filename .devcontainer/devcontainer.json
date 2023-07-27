@@ -1,0 +1,39 @@
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "DavidAnson.vscode-markdownlint",
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "foxundermoon.shell-format",
+        "jetmartin.bats",
+        "mads-hartmann.bash-ide-vscode",
+        "remisa.shellman",
+        "rogalmic.bash-debug",
+        "timonwong.shellcheck"
+      ],
+      "settings": {
+        "bashIde.explainshellEndpoint": "http://explainshell:5000",
+        "json.format.enable": false,
+        "prettier.documentSelectors": [
+          "**/*.json",
+          "**/*.md",
+          "**/*.yaml",
+          "**/*.yml"
+        ]
+      }
+    }
+  },
+  "dockerComposeFile": "docker-compose.yml",
+  "features": {
+    "ghcr.io/edouard-lopez/devcontainer-features/bats:0": {},
+    "ghcr.io/devcontainers-contrib/features/markdownlint-cli2:1": {},
+    "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
+    "ghcr.io/devcontainers-contrib/features/prettier:1": {},
+    "ghcr.io/lukewiwa/features/shellcheck:0": {},
+    "ghcr.io/devcontainers-contrib/features/shfmt:1.0.0": {}
+  },
+  "postCreateCommand": ".devcontainer/postCreate.sh",
+  "service": "workspace",
+  "workspaceFolder": "/workspace"
+}
